@@ -24,10 +24,11 @@ class TrivialViewModel : ViewModel() {
     var settings by mutableStateOf(GameSettings())
     var currentQuestionIndex by mutableStateOf(0)
     var score by mutableStateOf(0)
+    // Here
     var timeLeft by mutableStateOf(settings.timePerRound)
     private val questions = listOf(
-        Question("What is Kotlin?", listOf("Language", "Food", "Animal", "Car"), 0),
-        Question("What is HTML?", listOf("Markup", "Protocol", "Database", "None"), 0),
+        Question("Best pizza?", listOf("Piña pizza", "Pepperoni", "4 cheese", "BBQ"), 0),
+        Question("What sound make a cat?", listOf("Muuu", "Beeeee", "Miaw", "Grraaaa"), 0),
         Question("What is Java?", listOf("Coffee", "Programming Language", "Planet", "Movie"), 1),
         Question("What is Python?", listOf("Snake", "Car", "Language", "Country"), 2),
         Question("What is Swift?", listOf("Bird", "Apple's Language", "Fast", "Tool"), 1),
@@ -50,7 +51,10 @@ class TrivialViewModel : ViewModel() {
             navController.navigate("result")
         }
     }
-
+    // Reset timer revisar, al agotar el tiempo y pasar a siguiente ronda, no se renicia.
+    /*fun resetTimer() {
+        timeLeft = settings.timePerRound
+    }*/
     fun resetTimer() {
         timeLeft = settings.timePerRound
     }
