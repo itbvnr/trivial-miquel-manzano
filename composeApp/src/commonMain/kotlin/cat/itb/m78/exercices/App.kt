@@ -85,7 +85,7 @@ fun GameScreen(navController: NavController, viewModel: TrivialViewModel) {
     val question = viewModel.getCurrentQuestion()
     val timeLeft = viewModel.timeLeft
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(question) {
         viewModel.resetTimer()
         viewModel.startTimer {
             viewModel.answerQuestion(-1, navController)
