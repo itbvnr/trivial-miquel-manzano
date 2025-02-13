@@ -1,0 +1,92 @@
+<resources>
+    <!-- Pregunta 1 -->
+    <pregunta>
+        <enunciado>Quina d'aquestes opcions representa una lambda en Kotlin?</enunciado>
+        <respuesta correcta="false">fun() {} // No és una lambda</respuesta>
+        <respuesta correcta="false">object {} // No és una lambda</respuesta>
+        <respuesta correcta="true">{ x -> x + 1 } // És una lambda</respuesta>
+        <respuesta correcta="false">val x = fun() {} // No és una lambda</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 2 -->
+    <pregunta>
+        <enunciado>Quina és una característica important de les lambdes en Kotlin?</enunciado>
+        <respuesta correcta="false">Són únicament per definir classes</respuesta>
+        <respuesta correcta="false">No es poden passar com a paràmetres</respuesta>
+        <respuesta correcta="true">Implementen codi que executarà altra funció</respuesta>
+        <respuesta correcta="false">Requereixen sempre la paraula reservada 'fun'</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 3 -->
+    <pregunta>
+        <enunciado>Quina és la sintaxi correcta per cridar una funció que accepta una lambda?</enunciado>
+        <respuesta correcta="true">miFuncion { println(it) }</respuesta>
+        <respuesta correcta="false">miFuncion [ x -> println(x) ]</respuesta>
+        <respuesta correcta="false">miFuncion (x => x * x)</respuesta>
+        <respuesta correcta="false">miFuncion { -> it }</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 4 -->
+    <pregunta>
+        <enunciado>Què representa el paràmetre  "it" d'una lambda en Kotlin?</enunciado>
+        <respuesta correcta="false">Una paraula reservada per referenciar variables globals</respuesta>
+        <respuesta correcta="false">El nom de qualsevol paràmetre d'una funció</respuesta>
+        <respuesta correcta="false">El nom propietari del paquet</respuesta>
+        <respuesta correcta="true">El paràmetre únic d'una lambda quan no es declara explícitament</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 5 -->
+    <pregunta>
+        <enunciado>A quin lloc es defineix generalment una lambda?</enunciado>
+        <respuesta correcta="true">Com a paràmetre d'entrada d'una funció</respuesta>
+        <respuesta correcta="false">Només a la declaració d'una classe</respuesta>
+        <respuesta correcta="false">Als fitxers globals exclusivament</respuesta>
+        <respuesta correcta="false">Sempre dins d'una interfície</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 6 -->
+    <pregunta>
+        <enunciado>Com es simplifica una crida a una lambda que té un sol paràmetre?</enunciado>
+        <respuesta correcta="false">Utilitzant la paraula "this"</respuesta>
+        <respuesta correcta="true">Utilitzant "it" per accedir al paràmetre</respuesta>
+        <respuesta correcta="false">Declarant explícitament els paràmetres sempre</respuesta>
+        <respuesta correcta="false">Renunciant als paràmetres</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 7 -->
+    <pregunta>
+        <enunciado>Quina de les següents característiques es correspon a les d'una lambda amb més d'un paràmetre?</enunciado>
+        <respuesta correcta="true">Els paràmetres han de ser declarats explícitament</respuesta>
+        <respuesta correcta="false">Només s'utilitza "it" per passar tots els valors</respuesta>
+        <respuesta correcta="false">La sintaxi { it, it -> it } és vàlida</respuesta>
+        <respuesta correcta="false">Les lambdes només poden tenir un paràmetre</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 8 -->
+    <pregunta>
+        <enunciado>Quin avantatge té Kotlin amb les lambdes respecte a Java?</enunciado>
+
+        <respuesta correcta="false">Kotlin elimina l'ús de lambdes a favor de les funcions abstractes</respuesta>
+        <respuesta correcta="false">Kotlin només accepta lambdes sense paràmetres</respuesta>
+        <respuesta correcta="true">Kotlin permet una sintaxi més concisa gràcies a l'ordre de les lambdes</respuesta>
+        <respuesta correcta="false">Les lambdes sempre es defineixen dins de classes abstractes</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 9 -->
+    <pregunta>
+        <enunciado>Com es pot definir una lambda que opera sobre una llista en Kotlin?</enunciado>
+        <respuesta correcta="true">val suma = { x: Int, y: Int -> x + y }</respuesta>
+        <respuesta correcta="false">val suma = (x, y) -> x + y</respuesta>
+        <respuesta correcta="false">val suma: (Int, Int) -> Int = lambda@{ x, y -> x + y }</respuesta>
+        <respuesta correcta="false">val suma { x, y -> x + y }</respuesta>
+    </pregunta>
+
+    <!-- Pregunta 10 -->
+    <pregunta>
+        <enunciado>Quina diferència hi ha entre una lambda i una funció anònima en Kotlin?</enunciado>
+        <respuesta correcta="true">Una funció anònima pot retornar amb "return", mentre que una lambda no</respuesta>
+        <respuesta correcta="false">Les lambdes són sempre més lentes que les funcions anònimes</respuesta>
+        <respuesta correcta="false">Les funcions anònimes necessiten classe</respuesta>
+        <respuesta correcta="false">No hi ha cap diferència; són equivalents</respuesta>
+    </pregunta>
+</resources>
