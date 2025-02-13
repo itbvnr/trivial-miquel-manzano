@@ -26,6 +26,7 @@ class TrivialViewModel : ViewModel() {
     var score by mutableStateOf(0)
     // Here
     var timeLeft by mutableStateOf(settings.timePerRound)
+    // Si implemento el xml con las preguntas, la funcionalidad de random es mas facil
     private val questions = listOf(
         Question("Best pizza?", listOf("Piña pizza", "Pepperoni", "4 cheese", "BBQ"), 0),
         Question("What sound make a cat?", listOf("Muuu", "Beeeee", "Miaw", "Grraaaa"), 0),
@@ -113,6 +114,7 @@ fun ResultScreen(navController: NavController, viewModel: TrivialViewModel) {
     }
 }
 
+// Estoy usando una API?? omaiga
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(navController: NavController, viewModel: TrivialViewModel) {
@@ -128,7 +130,7 @@ fun SettingsScreen(navController: NavController, viewModel: TrivialViewModel) {
         Slider(value = rounds.toFloat(), onValueChange = { rounds = it.toInt() }, valueRange = 3f..10f, steps = 7)
         Text("Rounds: $rounds")
 
-        // Reemplazo de DropdownMenu con otra opción
+        // exposedDropdownMenuBOx del material3 no del 2
         ExposedDropdownMenuBox(
             expanded = expanded,
             onExpandedChange = { expanded = it }
@@ -139,7 +141,8 @@ fun SettingsScreen(navController: NavController, viewModel: TrivialViewModel) {
                 readOnly = true,
                 label = { Text("Difficulty") },
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-                modifier = Modifier.menuAnchor()
+                modifier = Modifier.menuAnchor(),
+                colors = ExposedDropdownMenuDefaults.textFieldColors()
             )
             ExposedDropdownMenu(
                 expanded = expanded,
@@ -172,6 +175,7 @@ fun SettingsScreen(navController: NavController, viewModel: TrivialViewModel) {
 // Navigation Setup
 @Composable
 fun TrivialNavHost(navController: NavHostController, viewModel: TrivialViewModel) {
+    // NAvHost es un contenedor para navegar via NavControler https://developer.android.com/reference/androidx/navigation/NavHost
     NavHost(navController, startDestination = "menu") {
         composable("menu") { MenuScreen(navController) }
         composable("game") { GameScreen(navController, viewModel) }
