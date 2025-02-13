@@ -26,7 +26,8 @@ class TrivialViewModel : ViewModel() {
     var score by mutableStateOf(0)
     // Here
     var timeLeft by mutableStateOf(settings.timePerRound)
-    // Si implemento el xml con las preguntas, la funcionalidad de random es mas facil
+    /* Si implemento el xml con las preguntas, la funcionalidad de random es mas facil
+    * He de cambiar la forma de validar las preguntas correctas, trabajar las respuestas de forma induvidual como objeto.*/
     private val questions = listOf(
         Question("Best pizza?", listOf("Piña pizza", "Pepperoni", "4 cheese", "BBQ"), 0),
         Question("What sound make a cat?", listOf("Muuu", "Beeeee", "Miaw", "Grraaaa"), 0),
@@ -52,10 +53,6 @@ class TrivialViewModel : ViewModel() {
             navController.navigate("result")
         }
     }
-    // Reset timer revisar, al agotar el tiempo y pasar a siguiente ronda, no se renicia.
-    /*fun resetTimer() {
-        timeLeft = settings.timePerRound
-    }*/
     fun resetTimer() {
         timeLeft = settings.timePerRound
     }
