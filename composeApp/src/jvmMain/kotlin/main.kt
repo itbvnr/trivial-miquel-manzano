@@ -5,18 +5,18 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import java.awt.Dimension
-import cat.itb.m78.exercices.App
+
 
 fun main() = application {
     Window(
         title = "M78Exercices",
-        state = rememberWindowState(width = 800.dp, height = 600.dp),
+        /*state = rememberWindowState(width = 720.dp, height = 1280.dp),*/
         onCloseRequest = ::exitApplication,
     ) {
-        window.minimumSize = Dimension(350, 600)
-        App()
+        /*window.minimumSize = Dimension(720, 1280)*/
+        ScoreApp()
     }
 }
 
 @Composable
-fun AppPreview() { App() }
+fun AppPreview() { ScoreApp() }
