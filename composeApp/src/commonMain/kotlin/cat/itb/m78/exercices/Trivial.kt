@@ -8,11 +8,8 @@ import androidx.navigation.compose.*
 import kotlinx.coroutines.delay
 
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.TextFieldDefaults
 
 // Data Model
 data class Question(val text: String, val options: List<String>, val correctAnswer: Int)

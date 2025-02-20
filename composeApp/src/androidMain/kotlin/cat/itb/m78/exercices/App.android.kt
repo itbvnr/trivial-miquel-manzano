@@ -1,5 +1,6 @@
 package cat.itb.m78.exercices
 
+import ScoreApp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

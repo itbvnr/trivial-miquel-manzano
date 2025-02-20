@@ -10,13 +10,13 @@ import java.awt.Dimension
 fun main() = application {
     Window(
         title = "M78Exercices",
-        state = rememberWindowState(width = 720.dp, height = 1280.dp),
+        /*state = rememberWindowState(width = 720.dp, height = 1280.dp),*/
         onCloseRequest = ::exitApplication,
     ) {
-        window.minimumSize = Dimension(720, 1280)
-        TrivialApp()
+        /*window.minimumSize = Dimension(720, 1280)*/
+        ScoreApp()
     }
 }
 
 @Composable
-fun AppPreview() { TrivialApp() }
+fun AppPreview() { ScoreApp() }
